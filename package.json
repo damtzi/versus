@@ -10,7 +10,8 @@
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "eslint ."
+		"lint": "eslint --fix src --ext .ts,.js,.svelte",
+        "format": "prettier --write '{public,src}/**/*.{css,html,js,svelte}'"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.22.2",
@@ -21,8 +22,10 @@
 		"autoprefixer": "10.4.7",
 		"concurrently": "7.3.0",
 		"eslint": "^8.16.0",
-		"eslint-plugin-svelte3": "^4.0.0",
+		"eslint-plugin-svelte3": "4.0.0",
 		"postcss": "8.4.14",
+		"prettier": "2.7.1",
+		"prettier-plugin-svelte": "2.7.0",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.7.1",
 		"svelte-preprocess": "^4.10.6",
